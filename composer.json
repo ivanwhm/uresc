@@ -13,21 +13,23 @@
             "email": "daniel_schlindwein@outlook.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.6.0",
-        "yiisoft/yii2": "~2.0.10",
-        "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0"
+      "php": ">=5.6.0",
+      "yiisoft/yii2": "~2.0.10",
+      "yiisoft/yii2-bootstrap": "~2.0.0",
+      "yiisoft/yii2-swiftmailer": "~2.0.0",
+      "yiisoft/yii2-imagine": "~2.0.0",
+      "wadeshuler/yii2-ckeditor-cdn": "~1.0",
+        "kartik-v/yii2-icons": "@dev"
     },
     "require-dev": {
-        "yiisoft/yii2-debug": "~2.0.0",
-        "yiisoft/yii2-gii": "~2.0.0",
-        "yiisoft/yii2-faker": "~2.0.0",
-
-        "codeception/base": "^2.2.3",
-        "codeception/verify": "~0.3.1",
-        "codeception/specify": "~0.4.3"
+      "yiisoft/yii2-debug": "~2.0.0",
+      "yiisoft/yii2-gii": "~2.0.0",
+      "yiisoft/yii2-faker": "~2.0.0",
+      "codeception/base": "^2.2.3",
+      "codeception/verify": "~0.3.1",
+      "codeception/specify": "~0.4.3"
     },
     "config": {
         "process-timeout": 1800
