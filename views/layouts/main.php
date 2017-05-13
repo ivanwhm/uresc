@@ -26,6 +26,9 @@ $this->title = $set->page_title;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <?= Icon::map($this,Icon::FA) ?>
+<!--    --><?//= Icon::map($this,Icon::BSG) ?>
+    <?= Icon::map($this,Icon::TYP) ?>
+    <?= Icon::map($this,Icon::WHHG) ?>
     <title><?= Html::encode($this->title) ?></title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <?php $this->head() ?>
@@ -36,22 +39,22 @@ $this->title = $set->page_title;
 <div id="blue-theme">
 
     <div id="menu">
-        <div class="icon">
-            <div class="hamburguer">
-                <?= Icon::show("bars", ['class' => 'fa-1x']) ?>
+        <div class="ic">
+            <div class="ic-hamburguer">
+                <?= Icon::show("bars", ['class' => 'fa-1x'],Icon::FA) ?>
             </div>
         </div>
-        <div class="title">MENU</div>
+        <div class="menu-title">MENU</div>
         <ul id="menu-item">
             <li>
-                <?= Icon::show("home", ['class' => 'fa-1x icon-selected']) ?>
+                <?= Icon::show("home", ['class' => 'fa-1x ic-selected'], Icon::FA) ?>
                 <a href="<?= Url::home() ?>" class="<?= (Yii::$app->controller->id == "site") ? "selected" : "" ?>"><?= Yii::t('app', 'HOME') ?></a>
             </li>
             <?php
                 foreach (Menu::getMenu() as $menu) {
                     echo Html::beginTag('li');
 
-                    echo Icon::show($menu->icon, ['class' => 'fa-1x']);
+                    echo Icon::show($menu->icon, [], $menu->icon_library);
 
                     if ($menu->type == Menu::TYPE_MENU)
                         echo Html::a($menu->name, Url::toRoute(['menu', ['id' => $menu->id]]));
@@ -62,8 +65,8 @@ $this->title = $set->page_title;
 
                         echo Html::tag('span', $menu->name, ['class' => 'menu-item-drop']);
                         echo Icon::show("chevron-down", [
-                            'class' => 'fa-1x icon-down',
-                        ]);
+                            'class' => 'ic-down fa-1x',
+                        ], Icon::FA);
 
                         if ($menu->type == Menu::TYPE_DEPARTMENT)
                         {

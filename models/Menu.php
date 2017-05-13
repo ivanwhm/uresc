@@ -5,6 +5,7 @@
  * @property integer $id Menu's ID.
  * @property string $name Menu's name.
  * @property string $icon Menu's icon.
+ * @property string $icon_library Icon library of the page.
  * @property string $visible True if menu is visible.
  * @property integer $order Menu's order.
  * @property string $type Menu's type.
@@ -53,10 +54,11 @@ class Menu extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'order', 'icon'], 'required'],
+            [['name', 'order', 'icon', 'icon_library'], 'required'],
             [['order', 'page_id', 'user_created', 'user_updated'], 'integer'],
             [['date_created', 'date_updated', 'user_created', 'user_updated'], 'safe'],
             [['name', 'icon'], 'string', 'max' => 50],
+            [['icon_library'], 'string', 'max' => 5],
             [['visible', 'type'], 'string', 'max' => 1],
             [['page_id'], 'exist', 'skipOnError' => true, 'targetClass' => Page::className(), 'targetAttribute' => ['page_id' => 'id']],
             [['user_created'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_created' => 'id']],

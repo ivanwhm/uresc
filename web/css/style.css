@@ -1,9 +1,9 @@
-@font-face {	
+@font-face {
 	font-family: "Mosk";
 	src: url("fonts/Mosk Normal 400.ttf") format("truetype");
 }
 
-@font-face {	
+@font-face {
 	font-family: "Mosk Bold";
 	src: url("fonts/Mosk Medium 500.ttf") format("truetype");
 }
@@ -36,7 +36,7 @@ body {
 	overflow-x: auto;
 }
 
-#blue-theme #menu .icon {
+#blue-theme #menu .ic {
 	position: fixed;
 	width: 40px;
 	height: 100%;
@@ -46,7 +46,7 @@ body {
     z-index: -1;
 }
 
-#blue-theme #menu .icon .hamburguer {
+#blue-theme #menu .ic .ic-hamburguer {
 	width: 32px;
 	height: 31px; /* 40px; */
 	padding-right: 6px;
@@ -56,8 +56,8 @@ body {
 	background-color: #136b9c;
 }
 
-#blue-theme #menu .title {
-	position: fixed;	
+#blue-theme #menu .menu-title {
+	position: fixed;
 	width: 262px; /* 270px; */
 	height: 31px; /* 40px; */
 	background-color: #0888c6;
@@ -72,7 +72,7 @@ body {
 }
 
 #blue-theme #menu #menu-item {
-	list-style-type: none;	
+	list-style-type: none;
 	margin-top: 60px;
 }
 
@@ -88,13 +88,13 @@ body {
 }
 
 #blue-theme #menu #menu-item li .menu-item-drop:hover,
-#blue-theme #menu #menu-item li .icon-down:hover,
+#blue-theme #menu #menu-item li .ic-down:hover,
 #blue-theme #menu #menu-item li a:hover {
 	color: #136b9c;
 }
 
 #blue-theme #menu #menu-item li .menu-item-drop:active,
-#blue-theme #menu #menu-item li .icon-down:active,
+#blue-theme #menu #menu-item li .ic-down:active,
 #blue-theme #menu #menu-item li a:active {
 	color: #0888c6;
 }
@@ -117,14 +117,14 @@ body {
 	margin-left: -30px;
 }
 
-#blue-theme #menu #menu-item li .icon-selected {
+#blue-theme #menu #menu-item li .ic-selected {
 	color: #fff;
 	text-decoration: underline;
 	text-decoration-color: #0297db;
 	-moz-text-decoration-color: #0297db;
 }
 
-#blue-theme #menu #menu-item li .icon-down {
+#blue-theme #menu #menu-item li .ic-down {
 	color: #fff;
 	float: right;
 	margin-right: 10px;
@@ -132,13 +132,13 @@ body {
 }
 
 #blue-theme #menu #menu-item .sub {
-	list-style-type: none;	
+	list-style-type: none;
 	margin-left: -15px;
 	margin-bottom: 10px;
 }
 
 #blue-theme #menu #menu-item .sub li {
-	min-height: 0px;	
+	min-height: 0px;
 	margin-top: 10px;
 }
 
@@ -161,7 +161,7 @@ body {
 }
 
 #blue-theme #topo ul {
-	list-style-type: none;	
+	list-style-type: none;
 	margin-top: 5px;
 }
 
@@ -206,7 +206,7 @@ body {
 	background-image: url("../img/logo.png");
 	background-repeat: no-repeat;
 	background-size: 150px;
-	margin-left: 30px;	
+	margin-left: 30px;
 	margin-top: 15px;
 	cursor: pointer;
 }
@@ -227,7 +227,7 @@ body {
 
 #blue-theme #header #phrases #author {
 	color: #fff;
-	margin-top: 10px; 
+	margin-top: 10px;
 	text-shadow: 2px 2px #000;
 }
 
