@@ -45,7 +45,7 @@ $this->title = $set->page_title;
         <ul id="menu-item">
             <li>
                 <?= Icon::show("home", ['class' => 'fa-1x icon-selected']) ?>
-                <a href="<?= Url::home() ?>" class="selected"><?= Yii::t('app', 'HOME') ?></a>
+                <a href="<?= Url::home() ?>" class="<?= (Yii::$app->controller->id == "site") ? "selected" : "" ?>"><?= Yii::t('app', 'HOME') ?></a>
             </li>
             <?php
                 foreach (Menu::getMenu() as $menu) {
