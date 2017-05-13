@@ -24,6 +24,9 @@ use yii\db\ActiveRecord;
 class Settings extends ActiveRecord
 {
 
+    const LANGUAGE_PT_BR = 'pt-BR';
+    const LANGUAGE_EN_US = 'en-US';
+
     /**
      * @inheritdoc
      */

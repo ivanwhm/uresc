@@ -8,9 +8,9 @@
 namespace app\controllers;
 
 //Imports
-use yii\web\Controller;
+use app\components\UreController;
 
-class SiteController extends Controller
+class SiteController extends UreController
 {
 
     /**
