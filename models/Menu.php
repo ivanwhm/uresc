@@ -83,7 +83,7 @@ class Menu extends ActiveRecord
      */
     public static function getMenu()
     {
-        return self::find(['visible' => self::VISIBLE_YES])->orderBy('order')->all();
+        return self::find()->andWhere(['visible' => self::VISIBLE_YES])->orderBy('order')->all();
     }
 
 }

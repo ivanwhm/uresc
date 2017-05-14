@@ -117,14 +117,14 @@ body {
 	margin-left: -30px;
 }
 
-#ure-blue-theme #ure-menu #ure-menu-item li .ic-selected {
+#ure-blue-theme #ure-menu #ure-menu-item li .ure-icon-selected {
 	color: #fff;
 	text-decoration: underline;
 	text-decoration-color: #0297db;
 	-moz-text-decoration-color: #0297db;
 }
 
-#ure-blue-theme #ure-menu #ure-menu-item li .ic-down {
+#ure-blue-theme #ure-menu #ure-menu-item li .ure-icon-down {
 	color: #fff;
 	float: right;
 	margin-right: 10px;

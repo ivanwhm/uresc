@@ -26,7 +26,6 @@ $this->title = $set->page_title;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <?= Icon::map($this,Icon::FA) ?>
-    <?= Icon::map($this,Icon::TYP) ?>
     <?= Icon::map($this,Icon::WHHG) ?>
     <title><?= Html::encode($this->title) ?></title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -46,7 +45,7 @@ $this->title = $set->page_title;
         <div class="ure-menu-title">MENU</div>
         <ul id="ure-menu-item">
             <li>
-                <?= Icon::show("home", ['class' => 'fa-1x ic-selected'], Icon::FA) ?>
+                <?= Icon::show("home", ['class' => 'fa-1x' .  (Yii::$app->controller->id == "site" && Yii::$app->controller->action->id == "index") ? "ure-icon-selected" : ""], Icon::FA) ?>
                 <a href="<?= Url::home() ?>" class="<?= (Yii::$app->controller->id == "site" && Yii::$app->controller->action->id == "index") ? "selected" : "" ?>"><?= Yii::t('app', 'HOME') ?></a>
             </li>
             <?php
@@ -64,7 +63,7 @@ $this->title = $set->page_title;
 
                         echo Html::tag('span', $menu->name, ['class' => 'ure-menu-item-drop']);
                         echo Icon::show("chevron-down", [
-                            'class' => 'ic-down fa-1x',
+                            'class' => 'ure-icon-down fa-1x',
                         ], Icon::FA);
 
                         if ($menu->type == Menu::TYPE_DEPARTMENT)
