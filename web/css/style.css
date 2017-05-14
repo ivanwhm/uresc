@@ -21,11 +21,11 @@ body {
 	height: 100%;
 }
 
-#blue-theme {
+#ure-blue-theme {
 	width: 100%;
 }
 
-#blue-theme #menu {
+#ure-blue-theme #ure-menu {
 	position: fixed;
 	width: 300px;
 	height: 100%;
@@ -36,7 +36,7 @@ body {
 	overflow-x: auto;
 }
 
-#blue-theme #menu .ic {
+#ure-blue-theme #ure-menu .ure-icon {
 	position: fixed;
 	width: 40px;
 	height: 100%;
@@ -46,7 +46,7 @@ body {
     z-index: -1;
 }
 
-#blue-theme #menu .ic .ic-hamburguer {
+#ure-blue-theme #ure-menu .ure-icon .ure-icon-hamburguer {
 	width: 32px;
 	height: 31px; /* 40px; */
 	padding-right: 6px;
@@ -56,7 +56,7 @@ body {
 	background-color: #136b9c;
 }
 
-#blue-theme #menu .menu-title {
+#ure-blue-theme #ure-menu .ure-menu-title {
 	position: fixed;
 	width: 262px; /* 270px; */
 	height: 31px; /* 40px; */
@@ -71,83 +71,83 @@ body {
 	margin-left: 40px;
 }
 
-#blue-theme #menu #menu-item {
+#ure-blue-theme #ure-menu #ure-menu-item {
 	list-style-type: none;
 	margin-top: 60px;
 }
 
-#blue-theme #menu #menu-item li {
+#ure-blue-theme #ure-menu #ure-menu-item li {
 	min-height: 50px;
 }
 
-#blue-theme #menu #menu-item li .menu-item-drop,
-#blue-theme #menu #menu-item li a {
+#ure-blue-theme #ure-menu #ure-menu-item li .ure-menu-item-drop,
+#ure-blue-theme #ure-menu #ure-menu-item li a {
 	color: #fff;
 	text-decoration: none;
 	margin-left: 20px;
 }
 
-#blue-theme #menu #menu-item li .menu-item-drop:hover,
-#blue-theme #menu #menu-item li .ic-down:hover,
-#blue-theme #menu #menu-item li a:hover {
+#ure-blue-theme #ure-menu #ure-menu-item li .ure-menu-item-drop:hover,
+#ure-blue-theme #ure-menu #ure-menu-item li .ic-down:hover,
+#ure-blue-theme #ure-menu #ure-menu-item li a:hover {
 	color: #136b9c;
 }
 
-#blue-theme #menu #menu-item li .menu-item-drop:active,
-#blue-theme #menu #menu-item li .ic-down:active,
-#blue-theme #menu #menu-item li a:active {
+#ure-blue-theme #ure-menu #ure-menu-item li .ure-menu-item-drop:active,
+#ure-blue-theme #ure-menu #ure-menu-item li .ic-down:active,
+#ure-blue-theme #ure-menu #ure-menu-item li a:active {
 	color: #0888c6;
 }
 
-#blue-theme #menu #menu-item li .selected {
+#ure-blue-theme #ure-menu #ure-menu-item li .selected {
 	color: #136b9c;
 	text-decoration: none;
 }
 
-#blue-theme #menu #menu-item li .selected:hover {
+#ure-blue-theme #ure-menu #ure-menu-item li .selected:hover {
 	color: #fff;
 }
 
-#blue-theme #menu #menu-item li .selected:active {
+#ure-blue-theme #ure-menu #ure-menu-item li .selected:active {
 	color: #0888c6;
 }
 
-#blue-theme #menu #menu-item li i {
+#ure-blue-theme #ure-menu #ure-menu-item li i {
 	color: #fff;
 	margin-left: -30px;
 }
 
-#blue-theme #menu #menu-item li .ic-selected {
+#ure-blue-theme #ure-menu #ure-menu-item li .ic-selected {
 	color: #fff;
 	text-decoration: underline;
 	text-decoration-color: #0297db;
 	-moz-text-decoration-color: #0297db;
 }
 
-#blue-theme #menu #menu-item li .ic-down {
+#ure-blue-theme #ure-menu #ure-menu-item li .ic-down {
 	color: #fff;
 	float: right;
 	margin-right: 10px;
 	cursor: pointer;
 }
 
-#blue-theme #menu #menu-item .sub {
+#ure-blue-theme #ure-menu #ure-menu-item .ure-sub {
 	list-style-type: none;
 	margin-left: -15px;
 	margin-bottom: 10px;
 }
 
-#blue-theme #menu #menu-item .sub li {
+#ure-blue-theme #ure-menu #ure-menu-item .ure-sub li {
 	min-height: 0px;
 	margin-top: 10px;
 }
 
-#blue-theme #menu #menu-item .sub a {
+#ure-blue-theme #ure-menu #ure-menu-item .ure-sub a {
 	margin-left: 0px;
 	font-family: "Mosk";
 }
 
-#blue-theme #topo {
+#ure-blue-theme #ure-top {
 	position: fixed;
 	padding: 4px;
 	width: 100%;
@@ -160,30 +160,30 @@ body {
 	font-family: "Mosk Bold";
 }
 
-#blue-theme #topo ul {
+#ure-blue-theme #ure-top ul {
 	list-style-type: none;
 	margin-top: 5px;
 }
 
-#blue-theme #topo ul li {
+#ure-blue-theme #ure-top ul li {
 	display: inline-block;
 	margin-right: 20px;
 }
 
-#blue-theme #topo ul li a {
+#ure-blue-theme #ure-top ul li a {
 	color: #fff;
 	text-decoration: none;
 }
 
-#blue-theme #topo ul li a:hover {
+#ure-blue-theme #ure-top ul li a:hover {
 	color: #0297db;
 }
 
-#blue-theme #topo ul li a:active {
+#ure-blue-theme #ure-top ul li a:active {
 	color: #0888c6;
 }
 
-#blue-theme #header {
+#ure-blue-theme #ure-header {
 	position: fixed;
 	padding: 2px;
 	height: 200px;
@@ -199,7 +199,7 @@ body {
 	font-size: 18px;
 }
 
-#blue-theme #header #logo {
+#ure-blue-theme #ure-header #ure-logo {
 	position: absolute;
 	width: 180px;
 	height: 185px;
@@ -211,7 +211,7 @@ body {
 	cursor: pointer;
 }
 
-#blue-theme #header #phrases {
+#ure-blue-theme #ure-header #ure-phrases {
 	position: relative;
 	float: right;
 	height: 200px;
@@ -219,19 +219,19 @@ body {
 	text-align: right;
 }
 
-#blue-theme #header #phrases #phrase {
+#ure-blue-theme #ure-header #ure-phrases #ure-phrase {
 	margin-top: 140px;
 	color: #fff;
 	text-shadow: 2px 2px #000;
 }
 
-#blue-theme #header #phrases #author {
+#ure-blue-theme #ure-header #ure-phrases #ure-author {
 	color: #fff;
 	margin-top: 10px;
 	text-shadow: 2px 2px #000;
 }
 
-#blue-theme #content {
+#ure-blue-theme #ure-content {
 	position: relative;
 	color: #000;
 	padding: 10px;

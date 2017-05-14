@@ -26,7 +26,6 @@ $this->title = $set->page_title;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <?= Icon::map($this,Icon::FA) ?>
-<!--    --><?//= Icon::map($this,Icon::BSG) ?>
     <?= Icon::map($this,Icon::TYP) ?>
     <?= Icon::map($this,Icon::WHHG) ?>
     <title><?= Html::encode($this->title) ?></title>
@@ -36,19 +35,19 @@ $this->title = $set->page_title;
 <body>
 <?php $this->beginBody() ?>
 
-<div id="blue-theme">
+<div id="ure-blue-theme">
 
-    <div id="menu">
-        <div class="ic">
-            <div class="ic-hamburguer">
+    <div id="ure-menu">
+        <div class="ure-icon">
+            <div class="ure-icon-hamburguer">
                 <?= Icon::show("bars", ['class' => 'fa-1x'],Icon::FA) ?>
             </div>
         </div>
-        <div class="menu-title">MENU</div>
-        <ul id="menu-item">
+        <div class="ure-menu-title">MENU</div>
+        <ul id="ure-menu-item">
             <li>
                 <?= Icon::show("home", ['class' => 'fa-1x ic-selected'], Icon::FA) ?>
-                <a href="<?= Url::home() ?>" class="<?= (Yii::$app->controller->id == "site") ? "selected" : "" ?>"><?= Yii::t('app', 'HOME') ?></a>
+                <a href="<?= Url::home() ?>" class="<?= (Yii::$app->controller->id == "site" && Yii::$app->controller->action->id == "index") ? "selected" : "" ?>"><?= Yii::t('app', 'HOME') ?></a>
             </li>
             <?php
                 foreach (Menu::getMenu() as $menu) {
@@ -63,14 +62,14 @@ $this->title = $set->page_title;
                     else
                     {
 
-                        echo Html::tag('span', $menu->name, ['class' => 'menu-item-drop']);
+                        echo Html::tag('span', $menu->name, ['class' => 'ure-menu-item-drop']);
                         echo Icon::show("chevron-down", [
                             'class' => 'ic-down fa-1x',
                         ], Icon::FA);
 
                         if ($menu->type == Menu::TYPE_DEPARTMENT)
                         {
-                            echo Html::beginTag('ul', ['id' => 'department', 'class' => 'sub']);
+                            echo Html::beginTag('ul', ['id' => 'department', 'class' => 'ure-sub']);
                             foreach (Department::getDepartments() as $department)
                             {
                                 echo Html::beginTag('li');
@@ -81,7 +80,7 @@ $this->title = $set->page_title;
                         }
                         else if ($menu->type == Menu::TYPE_GALLERY)
                         {
-                            echo Html::beginTag('ul', ['id' => 'gallery', 'class' => 'sub']);
+                            echo Html::beginTag('ul', ['id' => 'gallery', 'class' => 'ure-sub']);
                             foreach (GalleryCategory::getGalleryCategories() as $gallery)
                             {
                                 echo Html::beginTag('li');
@@ -92,7 +91,7 @@ $this->title = $set->page_title;
                         }
                         else if ($menu->type == Menu::TYPE_FILE)
                         {
-                            echo Html::beginTag('ul', ['id' => 'file', 'class' => 'sub']);
+                            echo Html::beginTag('ul', ['id' => 'file', 'class' => 'ure-sub']);
                             foreach (DownloadCategory::getDownloadCategories() as $download)
                             {
                                 echo Html::beginTag('li');
@@ -109,7 +108,7 @@ $this->title = $set->page_title;
         </ul>
     </div>
 
-    <div id="topo">
+    <div id="ure-top">
         <ul>
             <li>
                 <a href="<?= Url::to('site/contact') ?>">
@@ -119,22 +118,22 @@ $this->title = $set->page_title;
         </ul>
     </div>
 
-    <div id="header">
-        <div id="logo"
+    <div id="ure-header">
+        <div id="ure-logo"
              onclick="window.location='<?= Yii::$app->getHomeUrl() ?>';"
              title="<?= $this->title; ?>">
         </div>
-        <div id="phrases">
-            <div id="phrase">
+        <div id="ure-phrases">
+            <div id="ure-phrase">
                 <?= $set->phrase ?>
             </div>
-            <div id="author">
+            <div id="ure-author">
                 <?= $set->phrase_author ?>
             </div>
         </div>
     </div>
 
-    <div id="content">
+    <div id="ure-content">
         <?= $content; ?>
     </div>
 
