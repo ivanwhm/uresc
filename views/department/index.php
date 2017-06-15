@@ -1,6 +1,6 @@
 <?php
 /**
-* Displays the content regarding a page.
+* Displays the content regarding a department page.
 *
 * @var $this View
 * @var $data Page
@@ -12,7 +12,7 @@ use app\models\Page;
 use yii\web\View;
 
 ?>
-<h1><?= $data->name ?></h1>
+<h1><?= Yii::t('app', 'DEPARTMENT') . ': ' . $data->name ?></h1>
 <div class="ure-page-text">
-    <?= $data->text ?>
+    <?= $data->info ?>
 </div>
