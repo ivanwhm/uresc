@@ -21,7 +21,6 @@ namespace app\models;
 
 //Imports
 use app\components\UreActiveRecord;
-use Yii;
 use yii\db\ActiveRecord;
 use yii\helpers\Url;
 
@@ -71,7 +70,7 @@ class Page extends ActiveRecord
      */
     public function getLink()
     {
-        return Url::to(['page/info', 'id' => $this->id]);
+        return Url::to(['page/index', 'id' => $this->id]);
     }
 
 }
