@@ -237,5 +237,18 @@ body {
 	padding: 10px;
 	float: left;
 	margin-left: 300px;
+	margin-top: 244px;
 	z-index: 1
+}
+
+#ure-blue-theme #ure-content h1 {
+    color: #136b9c;
+    font-family: "Mosk Bold";
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#ure-blue-theme #ure-content #ure-page-text {
+    font-family: "Mosk";
+    font-size: 18px;
 }
