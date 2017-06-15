@@ -69,7 +69,7 @@ class Department extends ActiveRecord
      */
     public function getLink()
     {
-        return Url::to(['department/info', 'id' => $this->id]);
+        return Url::to(['department/index', 'id' => $this->id]);
     }
 
 }

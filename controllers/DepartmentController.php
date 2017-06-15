@@ -1,6 +1,6 @@
 <?php
 /**
- * This class is responsible to manager the site page   s.
+ * This class is responsible to manager the site department pages.
  *
  * @author Ivan Wilhelm <ivan.whm@icloud.com>
  */
@@ -9,11 +9,11 @@ namespace app\controllers;
 
 //Imports
 use app\components\UreController;
-use app\models\Page;
+use app\models\Department;
 use Yii;
 use yii\web\NotFoundHttpException;
 
-class PageController extends UreController
+class DepartmentController extends UreController
 {
 
     /**
@@ -25,7 +25,7 @@ class PageController extends UreController
      */
     public function actionIndex($id)
     {
-        if (null !== ($data = Page::findOne($id))) {
+        if (null !== ($data = Department::findOne($id))) {
             return $this->render('index', [
                 'data' => $data
             ]);
