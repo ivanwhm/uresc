@@ -10,9 +10,22 @@ namespace app\components;
 use app\models\Settings;
 use Yii;
 use yii\web\Controller;
+use yii\web\ErrorAction;
 
 class UreController extends Controller
 {
+
+    /**
+     * @inheritdoc
+     */
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => ErrorAction::className(),
+            ],
+        ];
+    }
 
     /**
      * @inheritdoc

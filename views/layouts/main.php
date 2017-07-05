@@ -45,9 +45,12 @@ $this->title = $set->page_title;
         <div class="ure-menu-title">MENU</div>
         <ul id="ure-menu-item">
             <li>
-                <?= Icon::show("home", ['class' => 'fa-1x' . (Yii::$app->controller->id == "site" && Yii::$app->controller->action->id == "index") ? "ure-icon-selected" : ""], Icon::FA) ?>
+                <?php $homeClass = (Yii::$app->controller->id == "site" && Yii::$app->controller->action->id == "index") ? "ure-icon-selected" : ""; ?>
+                <?= Icon::show("home", ['class' => 'fa-1x' . $homeClass], Icon::FA) ?>
                 <a href="<?= Url::home() ?>"
-                   class="<?= (Yii::$app->controller->id == "site" && Yii::$app->controller->action->id == "index") ? "selected" : "" ?>"><?= Yii::t('app', 'HOME') ?></a>
+                   class="<?= (Yii::$app->controller->id == "site" && Yii::$app->controller->action->id == "index") ? "selected" : "" ?>">
+                    <?= Yii::t('app', 'HOME') ?>
+                </a>
             </li>
             <?php
             foreach (Menu::getMenu() as $menu) {
@@ -62,15 +65,12 @@ $this->title = $set->page_title;
                 } else {
 
                     echo Html::tag('span', $menu->name, ['class' => 'ure-menu-item-drop']);
-                    echo Icon::show("chevron-down", [
-                        'class' => 'ure-icon-down fa-1x',
-                    ], Icon::FA);
 
                     if ($menu->type == Menu::TYPE_DEPARTMENT) {
                         echo Html::beginTag('ul', ['id' => 'department', 'class' => 'ure-sub']);
                         foreach (Department::getDepartments() as $department) {
                             echo Html::beginTag('li');
-                            echo Html::a($department->name, $department->getLink());
+                            echo Html::a(' - ' . $department->name, $department->getLink());
                             echo Html::endTag('li');
                         }
                         echo Html::endTag('ul');
@@ -78,7 +78,7 @@ $this->title = $set->page_title;
                         echo Html::beginTag('ul', ['id' => 'gallery', 'class' => 'ure-sub']);
                         foreach (GalleryCategory::getGalleryCategories() as $gallery) {
                             echo Html::beginTag('li');
-                            echo Html::a($gallery->name, $gallery->getLink());
+                            echo Html::a(' - ' . $gallery->name, $gallery->getLink());
                             echo Html::endTag('li');
                         }
                         echo Html::endTag('ul');
@@ -86,7 +86,7 @@ $this->title = $set->page_title;
                         echo Html::beginTag('ul', ['id' => 'file', 'class' => 'ure-sub']);
                         foreach (DownloadCategory::getDownloadCategories() as $download) {
                             echo Html::beginTag('li');
-                            echo Html::a($download->name, $download->getLink());
+                            echo Html::a(' - ' . $download->name, $download->getLink());
                             echo Html::endTag('li');
                         }
                         echo Html::endTag('ul');
